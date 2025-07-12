@@ -1,0 +1,48 @@
+# Real-Time Gang Task Scheduling Simulation
+
+This project simulates and analyzes gang task scheduling in real-time multi-core systems.
+
+## Features
+- Simulation of gang tasks with bundled execution segments
+- Multiple scheduling policies (FIFO, LDF, HEFT)
+- Resource allocation strategies (FFD, BFD, WFD, RR)
+- Response time analysis methods (Closed-form, MILP)
+- GPU-accelerated computation
+
+## Running on Kaggle
+
+1. **Create a new notebook** on [Kaggle](https://www.kaggle.com/code)
+2. **Add dataset**:
+   ```python
+   from kaggle_datasets import KaggleDatasets
+   dataset_path = KaggleDatasets().get_gcs_path('<your-username>/real-time-scheduling-project')
+   ```
+3. **Clone repository**:
+   ```python
+   !git clone https://github.com/<your-username>/real-time-scheduling-project.git
+   ```
+4. **Run notebook**:
+   ```python
+   %cd /kaggle/working/real-time-scheduling-project/kaggle
+   %run kaggle_notebook.ipynb
+   ```
+
+## Running Locally
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run experiments
+python scripts/run_experiments.py \
+  --config configs/experiments.yaml \
+  --output results \
+  --batch_size 20
+```
+
+## Results
+- CSV files with experiment results
+- Visualization plots:
+  - Response time comparison
+  - Deadline meeting rates
+  - Energy utilization impact
+  - Scheduling overhead analysis
