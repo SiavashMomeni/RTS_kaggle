@@ -1,0 +1,23 @@
+# Data files
+*.csv
+*.pkl
+*.h5
+*.parquet
+
+# Plot outputs
+*.png
+*.pdf
+
+# Environment files
+.env
+.venv
+venv/
+env/
+
+# Kaggle working directory
+/kaggle/working/
+/kaggle/temp/
+
+# Byte-compiled files
+__pycache__/
+*.pyc
